@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    
+i=1;
+slide=1;
+setInterval(function() {
+
+if (i > 5) {
+i=1;
+}
+if (slide == 1)
+{
+
+$('#banner').css('background-image','url(' + i + '.jpg)');
+$('.caption').removeClass("current");
+$('#caption'+ i ).addClass("caption current");
+
+i++;
+}
+}, 
+
+2000);
+ 
+
+
+$(function() {
+$('.caption').hover( function(){
+
+slide=0;
+$('.caption').removeClass("current");
+},
+function(){
+
+slide=1;
+});
+});
+
+ 
+
+
+
+    $("#caption1").mouseover(function(){
+        $('#banner').css('background-image','url(1.jpg)');
+            });
+    
+        $("#caption2").mouseover(function(){
+        $('#banner').css('background-image','url(2.jpg)');
+    });
+    
+        $("#caption3").mouseover(function(){
+        $('#banner').css('background-image','url(3.jpg)');
+    });
+    
+        $("#caption4").mouseover(function(){
+        $('#banner').css('background-image','url(4.jpg)');
+    });
+    
+        $("#caption5").mouseover(function(){
+        $('#banner').css('background-image','url(5.jpg)');
+    });
+    
+    
+    $('#banner').css('background-image','url(1.jpg)');
+    
+    });
+</script>
+</head>
+<body>
+ <div id="main">
+ 
+ <div id="banner">banner</div>
+ 
+ <div id="caption1" class="caption"><b>GROCERIES</b><br>10 % OFF</div>
+ <div id="caption2" class="caption"><b>VEGETABLES</b><br>5% Discount</div>
+ <div id="caption3" class="caption"><b>FISH & MEAT</b><br>FREE COD</div>
+ <div id="caption4" class="caption"><b>WOMEN FASHION</b><br>100 Rs. Cashback*</div>
+ <div id="caption5" class="caption"><b>MOVIES</b><br>Rs.100 Only</div>
+ 
+ </div>
+
+</body>
+</html>
+
+ 
